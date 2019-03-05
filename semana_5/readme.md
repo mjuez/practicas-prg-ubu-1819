@@ -27,3 +27,6 @@ Donde el radicando es: `d = b²-4ac`.
 ## Ejercicio 2: Días de un mes
 
 Hacer un programa que pida un mes (formato: `mm`) y un año (formato: `yyyy`) y muestre por pantalla cuántos días tiene. Se debe tener en cuenta si el año es bisiesto para mostrar correctamente el número de días del mes febrero.
+
+- Un año es bisiesto cuando es divisible entre 4 y no es divisible entre 100; o cuando es divisible entre 400.
+- Se debe utilizar la sentencia condicional `switch`.
