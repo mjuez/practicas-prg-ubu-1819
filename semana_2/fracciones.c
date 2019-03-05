@@ -28,6 +28,7 @@
 
 /* 
  * Función principal.
+ * 
  * Lee la entrada por teclado de dos fracciones, realiza cálculos con ellas, y
  * los muestra por pantalla.
  */
