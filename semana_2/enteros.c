@@ -20,7 +20,7 @@
 
 // Directivas al preprocesador
 // Funciones estándar de entrada/salida (printf, scanf)
-#include<stdio.h>
+#include <stdio.h>
 
 /* 
  * Función principal.
@@ -28,20 +28,20 @@
  * Lee la entrada por teclado de tres números (natural, entero, entero largo) 
  * separados por espacios y los muestra por pantalla. 
  */
-int main(){
+int main() {
   // Declaración de variables
-  short unsigned int num1;  // ó short unsigned num1; (int es redundante). NATURAL
-  short signed int num2;    // ó short int num2; (signed es redundante). ENTERO
-  long signed int num3;     // ó long num3; (signed e int redundantes). ENTERO LARGO
+  short unsigned int num1;	// ó short unsigned num1; (int es redundante). NATURAL
+  short signed int num2;	// ó short int num2; (signed es redundante). ENTERO
+  long signed int num3;		// ó long num3; (signed e int redundantes). ENTERO LARGO
 
   // Entrada de datos
   printf("Introduce 3 números separados por espacios\n");
   scanf("%hu %hd %ld", &num1, &num2, &num3);
 
   // Impresión por pantalla
-  printf("Natural: %hu\n", num1);       // %hu -> short (h) unsigned (u)
-  printf("Entero: %hd\n", num2);        // %h -> short (h) int (d)
-  printf("Entero largo: %ld\n", num3);  // %l -> long (l) int (d)
-    
+  printf("Natural: %hu\n", num1);	// %hu -> short (h) unsigned (u)
+  printf("Entero: %hd\n", num2);	// %h -> short (h) int (d)
+  printf("Entero largo: %ld\n", num3);	// %l -> long (l) int (d)
+
   return 0;
 }
