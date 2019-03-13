@@ -32,3 +32,23 @@ como enteros cortos (`short`). Tras ello, mostrarlos por pantalla.
 | -1 2 3 | Natural: 65535<br />Entero: 2<br/>Entero largo: 3 |
 | 1 32768 3 | Natural: 1<br />Entero: -32768<br/>Entero largo: 3 |
 | 1 2 32768 | Natural: 1<br />Entero: 2<br/>Entero largo: 32768 |
+
+## Ejercicio 3: ASCII
+
+Hacer un programa que devuelva por pantalla el carácter correspondiente de la
+tabla ASCII al entero introducido por teclado.
+
+### Pruebas
+
+El rango de valores que se debe utilizar para las pruebas será [48, 122], 
+aunque el programa no debe comprobar si el número introducido está dentro de 
+ese rango.
+
+### Pruebas
+
+| **Entrada** | **Salida** |
+| --- | --- |
+| 48 | 0 |
+| 63 | ? |
+| 97 | a |
+| 122 | z |
