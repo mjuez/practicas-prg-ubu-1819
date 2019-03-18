@@ -44,11 +44,22 @@ El rango de valores que se debe utilizar para las pruebas será [48, 122],
 aunque el programa no debe comprobar si el número introducido está dentro de 
 ese rango.
 
-### Pruebas
-
 | **Entrada** | **Salida** |
 | --- | --- |
 | 48 | 0 |
 | 63 | ? |
 | 97 | a |
 | 122 | z |
+
+## Ejercicio 3: Número de enteros leídos
+
+Hacer un programa que devuelva por pantalla cuántos números enteros ha leído
+correctamente tras introducir hasta 3 números separados por coma.
+
+### Pruebas
+
+| **Entrada** | **Salida** |
+| --- | --- |
+| 1,2,3 | 3 |
+| 1,2 | 2 |
+| 1,a,3 | 1 |
