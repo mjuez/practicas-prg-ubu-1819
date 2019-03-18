@@ -25,9 +25,9 @@
  * Lee la entrada por teclado de tres números separados por coma e imprime
  * cuántos ha leído correctamente aprovechando el retorno de la función scanf.
  */
-int main(){
+int main() {
   // Declaración de variables
-  int num1, num2, num3, leidos;
+  int     num1, num2, num3, leidos;
 
   // Entrada de datos.
   printf("Introduce tres enteros separados por coma:\n");
@@ -35,6 +35,6 @@ int main(){
 
   // Impresión por pantalla.
   printf("He leído %d enteros.\n", leidos);
-  
+
   return 0;
 }
