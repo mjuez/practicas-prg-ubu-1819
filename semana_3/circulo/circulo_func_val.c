@@ -116,7 +116,7 @@ int calculaArea(int radio) {
  */
 int imprimeResultados(int perimetro, int area) {
   // Impresión por pantalla de resultados.
-  printf("Perímetro: %d Área: %d\n", perimetro, area);
+  printf("Perímetro: %d, Área: %d\n", perimetro, area);
 
   return 0;			// Las funciones siempre retornan un valor. ¿Tiene sentido que imprimeResultados sea una función?
 }
