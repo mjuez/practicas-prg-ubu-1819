@@ -20,6 +20,7 @@
 // Directivas al preprocesador
 // Funciones estándar de entrada/salida (printf, scanf)
 #include <stdio.h>
+// Constante PI
 #define PI 3.14159
 
 // Declaración de prototipos
