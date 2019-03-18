@@ -1,6 +1,6 @@
 /*
- * circulo_func_valor.c
- * ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+ * circulo_func_val.c
+ * ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
  * Pide el valor del radio de una circunferencia y nos muestra su perímetro y 
  * el área del círculo que encierra (datos enteros, redondeo de resultado).
  * 
