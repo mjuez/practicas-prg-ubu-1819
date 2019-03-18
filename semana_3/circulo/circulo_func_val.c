@@ -98,7 +98,7 @@ int calculaPerimetro(int radio) {
 int calculaArea(int radio) {
   // Declaración de variables (solo existen dentro de la función).
   // Se declara y se asigna el valor calculado en la misma línea.
-  float   area = PI * radio * radio;
+  int   area = PI * radio * radio;
 
   // Retorno del área.
   return area;
