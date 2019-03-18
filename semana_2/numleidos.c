@@ -1,6 +1,6 @@
 /*
- * ascii.c
- * ¯¯¯¯¯¯¯
+ * numleidos.c
+ * ¯¯¯¯¯¯¯¯¯¯¯
  * Lee tres números enteros separados por coma e imprime cuántos ha leído
  * correctamente.
  *
