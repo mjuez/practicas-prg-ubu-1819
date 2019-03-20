@@ -44,3 +44,21 @@ Utiliza `#define` para declarar y dar valor a la constante PI.
 | 3 | Perímetro: 18 Área: 28 |
 | 5 | Perímetro: 31 Área: 78 |
 
+## Ejercicio 1: Segundos
+
+Hacer un programa que pida un número de segundos y nos muestre su equivalente
+en horas, minutos, y segundos.
+
+Puedes utilizar `#define` para declarar y dar valor a constantes que almacenen
+el número de segundos que tiene una hora, y el número de segundos que tiene 
+un minuto.
+
+### Pruebas
+
+| **Entrada** | **Salida** |
+| --- | --- |
+| 59 | Horas 0, Minutos 0, Segundos 59 |
+| 60 | Horas 0, Minutos 1, Segundos 0 |
+| 3600 | Horas 1, Minutos 0, Segundos 0 |
+| 3661 | Horas 1, Minutos 1, Segundos 1 |
+
