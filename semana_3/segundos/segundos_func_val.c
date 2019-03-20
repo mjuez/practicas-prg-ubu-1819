@@ -84,7 +84,11 @@ unsigned leeSegundos() {
  * @return equivalente en horas de una cantidad de segundos.
  */
 unsigned calculaHoras(unsigned segundos) {
+  // Declaración de variables (solo existen dentro de la función).
+  // Se declara y se asigna el valor calculado en la misma línea.
   unsigned horas = segundos / HORA;
+  
+  // Retorno del número de horas.
   return horas;
 }
 
@@ -97,7 +101,11 @@ unsigned calculaHoras(unsigned segundos) {
  * @return equivalente en minutos de una cantidad de segundos.
  */
 unsigned calculaMinutos(unsigned segundos) {
+  // Declaración de variables (solo existen dentro de la función).
+  // Se declara y se asigna el valor calculado en la misma línea.
   unsigned minutos = segundos / MINUTO;
+  
+  // Retorno del número de minutos.
   return minutos;
 }
 
@@ -113,7 +121,11 @@ unsigned calculaMinutos(unsigned segundos) {
  * @return segundos restantes
  */
 unsigned calculaRestoSegundos(unsigned segundos, unsigned uTiempo) {
+  // Declaración de variables (solo existen dentro de la función).
+  // Se declara y se asigna el valor calculado en la misma línea.
   unsigned resto = segundos % uTiempo;
+
+  // Retorno del resto de segundos.
   return resto;
 }
 
@@ -128,7 +140,12 @@ unsigned calculaRestoSegundos(unsigned segundos, unsigned uTiempo) {
  * @return número de caracteres imprimidos.
  */
 int imprimeResultados(unsigned horas, unsigned minutos, unsigned segundos) {
+  // Declaración de variables (solo existen dentro de la función).
   int     numcar;
+
+  // Impresión por pantalla de resultados.
   numcar = printf("Horas %d, Minutos %d, Segundos %d\n", horas, minutos, segundos);
+
+  // Retorno del número de caracteres imprimidos.
   return numcar;
 }
