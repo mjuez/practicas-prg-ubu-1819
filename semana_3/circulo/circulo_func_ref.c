@@ -112,11 +112,15 @@ int calculaArea(int *radio) {
  * 
  * @param perimetro - referencia al perímetro del círculo.
  * @param area - referencia al área del círculo.
- * @return 0.
+ * @return número de caracteres imprimidos.
  */
 int imprimeResultados(int *perimetro, int *area) {
-  // Impresión por pantalla de resultados.
-  printf("Perímetro: %d, Área: %d\n", *perimetro, *area);
+  // Declaración de variables (solo existen dentro de la función).
+  int     numcar;
 
-  return 0;			// Las funciones siempre retornan un valor. ¿Tiene sentido que imprimeResultados sea una función?
+  // Impresión por pantalla de resultados.
+  numcar = printf("Perímetro: %d, Área: %d\n", *perimetro, *area);
+
+  // Retorno del número de caracteres imprimidos.
+  return numcar;
 }
