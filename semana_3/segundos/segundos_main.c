@@ -32,7 +32,7 @@
  */
 int main() {
   // Declaración de variables.
-  unsigned int segundos, horas, minutos, restoSegundos;
+  unsigned segundos, horas, minutos, restoSegundos;
 
   // Entrada de datos.
   printf("Introduce un número de segundos: ");
