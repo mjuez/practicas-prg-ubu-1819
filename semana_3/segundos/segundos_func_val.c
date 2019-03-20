@@ -1,6 +1,6 @@
 /*
- * segundos_main.c
- * ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+ * segundos_func_val.c
+ * ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
  * Pide el una cantidad entera de segundos y nos muestra su equivalente en
  * horas, minutos, y segundos.
  * 
