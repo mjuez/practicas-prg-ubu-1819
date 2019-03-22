@@ -44,7 +44,7 @@ Utiliza `#define` para declarar y dar valor a la constante PI.
 | 3 | Perímetro: 18 Área: 28 |
 | 5 | Perímetro: 31 Área: 78 |
 
-## Ejercicio 1: Segundos
+## Ejercicio 2: Segundos
 
 Hacer un programa que pida un número de segundos y nos muestre su equivalente
 en horas, minutos, y segundos.
@@ -62,3 +62,24 @@ un minuto.
 | 3600 | Horas 1, Minutos 0, Segundos 0 |
 | 3661 | Horas 1, Minutos 1, Segundos 1 |
 
+## Ejercicio 3: Cifras
+
+Hacer un programa que pida un número entero de cuatro cifras y lo descomponga
+en:
+
+- Unidades
+- Decenas
+- Centenas
+- Unidades de mil
+
+Puedes utilizar `#define` para declarar y dar valor a constantes que puedan
+ser útiles para realizar la descomposición. Por ejemplo: `#define U_MIL 1000`.
+
+### Pruebas
+
+| **Entrada** | **Salida** |
+| --- | --- |
+| 1000 | Unidades de mil: 1, Centenas: 0, Decenas: 0, Unidades: 0 |
+| 1100 | Unidades de mil: 1, Centenas: 1, Decenas: 0, Unidades: 0 |
+| 1110 | Unidades de mil: 1, Centenas: 1, Decenas: 1, Unidades: 0 |
+| 1111 | Unidades de mil: 1, Centenas: 1, Decenas: 1, Unidades: 1 |
