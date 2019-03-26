@@ -13,11 +13,12 @@ es igual al segundo, y a su vez, la suma de los divisores del segundo es igual
 al primero.
 
 Se debe implementar una entrada de datos robusta, es decir, que compruebe que
-cada número introducido sea un entero positivo. También se debe verificar que 
-los dos números introducidos no sean iguales. El programa permanecerá pidiendo
-datos hasta que la entrada cumpla con todos los requisitos. Opcionalmente se
-pueden mostrar mensajes con información acerca de por qué los datos 
-introducidos no son correctos.
+los datos introducidos tengan el formato esperado. En este caso concreto se 
+debe comprobar que cada número introducido sea un entero positivo. También se 
+debe verificar que los dos números introducidos no sean iguales. El programa 
+permanecerá pidiendo datos hasta que la entrada cumpla con todos los 
+requisitos. Opcionalmente se pueden mostrar mensajes con información acerca de 
+por qué los datos introducidos no son correctos.
 
 ### Pruebas
 
