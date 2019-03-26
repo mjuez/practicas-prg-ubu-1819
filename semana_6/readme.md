@@ -15,3 +15,13 @@ Donde la combinatoria m n `comb(m, n)` es `m! / (n! * (m-n)!)`.
 
 El ejercicio se debe resolver utilizando funciones recursivas, tanto para el
 cálculo del factorial como para el cálculo del sumatorio del binomio de newton.
+
+### Pruebas
+
+| **Entrada** | **Salida** |
+| --- | --- |
+| Introduce un número entero: 1<br />Introduce un número entero: 2<br />Introduce un número natural positivo: 3 | (1 + 2)^3 = 27 |
+| Introduce un número entero: 1<br />Introduce un número entero: 2<br />Introduce un número natural positivo: 0 | (1 + 2)^0 = 1 |
+| Introduce un número entero: 3<br />Introduce un número entero: 2<br />Introduce un número natural positivo: 1 | (3 + 2)^1 = 5 |
+| Introduce un número entero: 1<br />Introduce un número entero: 2<br />Introduce un número natural positivo: 5 | (1 + 2)^5 = 243 |
+| Introduce un número entero: 5<br />Introduce un número entero: 5<br />Introduce un número natural positivo: 5 | (5 + 5)^5 = 100000 |
