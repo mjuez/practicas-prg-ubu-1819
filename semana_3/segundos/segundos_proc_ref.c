@@ -12,7 +12,7 @@
  *   Francisco Javier Rodríguez <fjrdiaz@ubu.es>,
  *   Mario Juez <mariojg@ubu.es>
  * @date: 2019-02-19
- * @version: 2.0
+ * @version: 3.0
  * @license: GPLv3
  * @organization: LSI@EPS.UBU.ES
  */
@@ -21,14 +21,14 @@
 // Funciones estándar de entrada/salida (printf, scanf)
 #include <stdio.h>
 // Constantes (segundos en una hora y en un minuto)
-#define HORA 3600
-#define MINUTO 60
+#define MINUTOS_HORA 60
+#define SEGUNDOS_MINUTO 60
 
 // Declaración de prototipos
 void leeSegundos(unsigned *);
 void calculaHoras(unsigned *, unsigned *);
 void calculaMinutos(unsigned *, unsigned *);
-void calculaRestoSegundos(unsigned *, unsigned);
+void calculaResto(unsigned *, unsigned);
 void imprimeResultados(unsigned *, unsigned *, unsigned *);
 
 /*
@@ -45,8 +45,8 @@ int main() {
   leeSegundos(&segundos);
 
   // Cálculos.
-  calculaHoras(&segundos, &horas); // se actualizan los segundos (resto)!
   calculaMinutos(&segundos, &minutos); // se actualizan los segundos (resto)!
+  calculaHoras(&minutos, &horas); // se actualizan los minutos (resto)!
 
   // Impresión por pantalla de resultados.
   imprimeResultados(&horas, &minutos, &segundos);
@@ -71,19 +71,19 @@ void leeSegundos(unsigned *segundos) {
 /*
  * Procedimiento calculaHoras.
  * 
- * Calcula el equivalente en horas de una cantidad de segundos y la almacena
+ * Calcula el equivalente en horas de una cantidad de minutos y la almacena
  * en el parámetro horas pasado por referencia. A continuación calcula la 
- * cantidad de segundos restante y actualiza la referencia a segundos.
+ * cantidad de minutos restante y actualiza la referencia a minutos.
  * 
- * @param segundos - referencia a la cantidad de segundos
+ * @param minutos - referencia a la cantidad de minutos
  * @param horas - referencia a la cantidad de horas
  */
-void calculaHoras(unsigned *segundos, unsigned *horas) {
+void calculaHoras(unsigned *minutos, unsigned *horas) {
   // Cálculo del número de horas.
-  *horas = *segundos / HORA;
+  *horas = *minutos / MINUTOS_HORA;
   
-  // Actualización de segundos.
-  calculaRestoSegundos(segundos, HORA);
+  // Actualización de minutos.
+  calculaResto(minutos, MINUTOS_HORA);
 }
 
 /*
@@ -98,26 +98,26 @@ void calculaHoras(unsigned *segundos, unsigned *horas) {
  */
 void calculaMinutos(unsigned *segundos, unsigned *minutos) {
   // Cálculo del número de minutos.
-  *minutos = *segundos / MINUTO;
+  *minutos = *segundos / SEGUNDOS_MINUTO;
   
   // Actualización de segundos.
-  calculaRestoSegundos(segundos, MINUTO);
+  calculaResto(segundos, SEGUNDOS_MINUTO);
 }
 
 /*
  * Procedimiento calculaRestoSegundos.
  * 
- * Calcula los segundos restantes tras calcular su equivalencia a horas y 
- * minutos, se acutaliza la referencia a segundos con el nuevo valor.
+ * Calcula el tiempo restante (minutos o segundos) tras calcular su 
+ * equivalencia, se acutaliza la referencia a tiempo con el nuevo valor.
  * 
- * @param segundos - referencia a la cantidad de segundos
+ * @param tiempo - referencia a la cantidad de tiempo (segundos o minutos)
  * @param uTiempo - unidad de tiempo en base a la que calcular el resto 
  *                  (horas o minutos)
  */
-void calculaRestoSegundos(unsigned *segundos, unsigned uTiempo) {
+void calculaResto(unsigned *tiempo, unsigned uTiempo) {
   // Actualización de la cantidad de segundos al resto del cálculo de horas
   // o minutos.
-  *segundos = *segundos % uTiempo;
+  *tiempo = *tiempo % uTiempo;
 }
 
 /*

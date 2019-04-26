@@ -12,7 +12,7 @@
  *   Francisco Javier Rodríguez <fjrdiaz@ubu.es>,
  *   Mario Juez <mariojg@ubu.es>
  * @date: 2019-02-19
- * @version: 2.0
+ * @version: 3.0
  * @license: GPLv3
  * @organization: LSI@EPS.UBU.ES
  */
@@ -20,9 +20,9 @@
 // Directivas al preprocesador
 // Funciones estándar de entrada/salida (printf, scanf)
 #include <stdio.h>
-// Constantes (segundos en una hora y en un minuto)
-#define HORA 3600
-#define MINUTO 60
+// Constantes (minutos en una hora y segundos en un minuto)
+#define MINUTOS_HORA 60
+#define SEGUNDOS_MINUTO 60
 
 /*
  * Función principal.
@@ -39,10 +39,9 @@ int main() {
   scanf("%u", &segundos);
 
   // Cálculos.
-  horas = segundos / HORA;
-  restoSegundos = segundos % HORA;
-  minutos = restoSegundos / MINUTO;
-  restoSegundos = restoSegundos % MINUTO;
+  restoSegundos = segundos % SEGUNDOS_MINUTO;
+  minutos = (segundos / SEGUNDOS_MINUTO) % MINUTOS_HORA;
+  horas = segundos / SEGUNDOS_MINUTO / MINUTOS_HORA;
 
   // Impresión por pantalla de resultados.
   printf("Horas %d, Minutos %d, Segundos %d\n", horas, minutos, restoSegundos);

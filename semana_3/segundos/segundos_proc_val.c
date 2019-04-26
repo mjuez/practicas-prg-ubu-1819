@@ -12,7 +12,7 @@
  *   Francisco Javier Rodríguez <fjrdiaz@ubu.es>,
  *   Mario Juez <mariojg@ubu.es>
  * @date: 2019-02-19
- * @version: 2.0
+ * @version: 3.0
  * @license: GPLv3
  * @organization: LSI@EPS.UBU.ES
  */
@@ -21,8 +21,8 @@
 // Funciones estándar de entrada/salida (printf, scanf)
 #include <stdio.h>
 // Constantes (segundos en una hora y en un minuto)
-#define HORA 3600
-#define MINUTO 60
+#define MINUTOS_HORA 60
+#define SEGUNDOS_MINUTO 60
 
 // Declaración de prototipos
 void    leeSegundos();
@@ -77,11 +77,11 @@ void calculaHoras(unsigned segundos) {
   unsigned horas, restoSegundos;
 
   // Cálculo e impresión de horas.
-  horas = segundos / HORA;
+  horas = segundos / SEGUNDOS_MINUTO / MINUTOS_HORA;
   imprimeHoras(horas);
 
   // Cálculo de minutos con el resto de segundos.
-  restoSegundos = segundos % HORA;
+  restoSegundos = segundos % (SEGUNDOS_MINUTO * MINUTOS_HORA);
   calculaMinutos(restoSegundos);
 }
 
@@ -98,11 +98,11 @@ void calculaMinutos(unsigned segundos) {
   unsigned minutos, restoSegundos;
 
   // Cálculo e impresión de minutos.
-  minutos = segundos / MINUTO;
+  minutos = segundos / SEGUNDOS_MINUTO;
   imprimeMinutos(minutos);
 
   // Cálculo e impresión del resto de segundos.
-  restoSegundos = segundos % MINUTO;
+  restoSegundos = segundos % SEGUNDOS_MINUTO;
   imprimeSegundos(restoSegundos);
 }
 

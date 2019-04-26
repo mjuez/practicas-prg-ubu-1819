@@ -12,7 +12,7 @@
  *   Francisco Javier Rodríguez <fjrdiaz@ubu.es>,
  *   Mario Juez <mariojg@ubu.es>
  * @date: 2019-02-19
- * @version: 2.0
+ * @version: 3.0
  * @license: GPLv3
  * @organization: LSI@EPS.UBU.ES
  */
@@ -21,14 +21,14 @@
 // Funciones estándar de entrada/salida (printf, scanf)
 #include <stdio.h>
 // Constantes (segundos en una hora y en un minuto)
-#define HORA 3600
-#define MINUTO 60
+#define MINUTOS_HORA 60
+#define SEGUNDOS_MINUTO 60
 
 // Declaración de prototipos
 unsigned leeSegundos();
 unsigned calculaHoras(unsigned *);
 unsigned calculaMinutos(unsigned *);
-unsigned calculaRestoSegundos(unsigned *, unsigned);
+unsigned calculaRestoSegundos(unsigned *);
 int     imprimeResultados(unsigned *, unsigned *, unsigned *);
 
 /*
@@ -46,9 +46,8 @@ int main() {
 
   // Cálculos.
   horas = calculaHoras(&segundos);
-  restoSegundos = calculaRestoSegundos(&segundos, HORA);
-  minutos = calculaMinutos(&restoSegundos);
-  restoSegundos = calculaRestoSegundos(&restoSegundos, MINUTO);
+  minutos = calculaMinutos(&segundos) % MINUTOS_HORA;
+  restoSegundos = calculaRestoSegundos(&segundos);
 
   // Impresión por pantalla de resultados.
   imprimeResultados(&horas, &minutos, &restoSegundos);
@@ -86,7 +85,7 @@ unsigned leeSegundos() {
 unsigned calculaHoras(unsigned *segundos) {
   // Declaración de variables (solo existen dentro de la función).
   // Se declara y se asigna el valor calculado en la misma línea.
-  unsigned horas = *segundos / HORA;
+  unsigned horas = *segundos / SEGUNDOS_MINUTO / MINUTOS_HORA;
   
   // Retorno del número de horas.
   return horas;
@@ -103,7 +102,7 @@ unsigned calculaHoras(unsigned *segundos) {
 unsigned calculaMinutos(unsigned *segundos) {
   // Declaración de variables (solo existen dentro de la función).
   // Se declara y se asigna el valor calculado en la misma línea.
-  unsigned minutos = *segundos / MINUTO;
+  unsigned minutos = *segundos / SEGUNDOS_MINUTO;
   
   // Retorno del número de minutos.
   return minutos;
@@ -112,18 +111,15 @@ unsigned calculaMinutos(unsigned *segundos) {
 /*
  * Función calculaRestoSegundos.
  * 
- * Calcula los segundos restantes tras calcular su equivalencia a horas y 
- * minutos.
+ * Calcula los segundos restantes tras calcular su equivalencia a minutos.
  * 
  * @param segundos - referencia a la cantidad de segundos
- * @param uTiempo - unidad de tiempo en base a la que calcular el resto 
- *                  (horas o minutos)
  * @return segundos restantes
  */
-unsigned calculaRestoSegundos(unsigned *segundos, unsigned uTiempo) {
+unsigned calculaRestoSegundos(unsigned *segundos) {
   // Declaración de variables (solo existen dentro de la función).
   // Se declara y se asigna el valor calculado en la misma línea.
-  unsigned resto = *segundos % uTiempo;
+  unsigned resto = *segundos % SEGUNDOS_MINUTO;
 
   // Retorno del resto de segundos.
   return resto;
